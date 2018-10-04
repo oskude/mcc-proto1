@@ -42,7 +42,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="CSGCombiner" type="CSGCombiner" parent="."]
 layers = 1
 operation = 0
-use_collision = false
+use_collision = true
 snap = 0.001
 
 [node name="CSGBox" type="CSGBox" parent="CSGCombiner"]
