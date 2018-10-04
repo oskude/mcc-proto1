@@ -6,7 +6,7 @@
 
 margin = 0.04
 radius = 0.25
-height = 0.8
+height = 1.3
 
 [node name="Player" type="KinematicBody"]
 input_ray_pickable = true
@@ -20,15 +20,16 @@ collision/safe_margin = 0.001
 script = ExtResource( 1 )
 
 [node name="Body" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1.4, 0 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1, 0 )
 shape = SubResource( 1 )
 disabled = false
 _sections_unfolded = [ "Transform", "shape" ]
 
 [node name="Head" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65, 0 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Camera" type="Camera" parent="Head"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0 )
 keep_aspect = 1
 cull_mask = 1048575
 environment = null
