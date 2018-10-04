@@ -25,14 +25,13 @@ func _physics_process(delta):
 	if Input.is_action_pressed("player_move_right"):    direction += aim.x
 	direction = direction.normalized()
 	
-	#var gravity = velocity.y
-	#if not is_on_floor():
-	#	gravity += GRAVITY * delta
+	var gravity = velocity.y
+	if not is_on_floor():
+		gravity += GRAVITY * delta
 	
 	var accel = DEACCEL if direction.length() > 0 else ACCEL
 	velocity = velocity.linear_interpolate(direction * MAX_SPEED, accel * delta);
-	velocity.y = 0;
-	#velocity.y = gravity;
+	velocity.y = gravity;
 	
 	var motion = velocity * delta
 	motion = move_and_slide(motion, UP)
