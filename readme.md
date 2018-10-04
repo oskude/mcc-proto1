@@ -10,5 +10,3 @@ key | action
 `D` | player_move_right
 `R` | reload_scene
 `Esc` | quit_game
-`F1` | capture_mouse (default)
-`F2` | confine_mouse
